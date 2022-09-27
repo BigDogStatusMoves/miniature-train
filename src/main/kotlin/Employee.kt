@@ -1,9 +1,8 @@
-import java.text.DecimalFormat
+
 
 class Employee(val name:String, val position: PositionTitle, val salary:Boolean, val payRate:Double, val shift:Int) {
-    private val decimalFormat = DecimalFormat("###,###.###")
     var weeklyPay: Double = 0.00
-    var formattedPay: String = decimalFormat.format(weeklyPay)
+
     fun calculate(hoursln: Double) {
         if (hoursln>40 && !salary){
             val overtimeHours = hoursln - 40
@@ -24,13 +23,13 @@ class Employee(val name:String, val position: PositionTitle, val salary:Boolean,
             
 
         }
-        formattedPay = decimalFormat.format(weeklyPay)
+
     }
     fun display() {
         println("Name: $name")
         println("Position: $position")
         println("Pay Rate: $payRate")
-        println("Weekly Earnings: $formattedPay\n")
+        println("Weekly Earnings: $weeklyPay\n")
 
     }
 
