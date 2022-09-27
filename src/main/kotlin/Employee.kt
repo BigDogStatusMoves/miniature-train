@@ -1,6 +1,5 @@
 import java.text.DecimalFormat
 
-@Suppress("NAME_SHADOWING")
 class Employee(val name:String, val position: PositionTitle, val salary:Boolean, val payRate:Double, val shift:Int) {
     private val decimalFormat = DecimalFormat("###,###.###")
     var weeklyPay: Double = 0.00
